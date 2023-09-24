@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const uploadMiddleware = require("../middleware/MulterMiddleware");
-const UploadModel = require("../models/UploadModel");
+const UploadModel = require("../models/uploadModel");
 
 const router = Router();
 
