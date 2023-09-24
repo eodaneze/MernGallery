@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require("cors");
+const upload = require('./routes/uploadRoute')
 require('./config/db')
 require('dotenv').config();
 
@@ -7,6 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
+app.use('/api', upload)
 
 app.get('/', (req, res) => {
      res.send("Hello from node api");
