@@ -4,12 +4,12 @@ const UploadModel = require("../models/UploadModel");
 
 const router = Router();
 
-router.get("/api/get", async (req, res) => {
+router.get("", async (req, res) => {
   const allPhotos = await UploadModel.find().sort({ createdAt: "descending" });
   res.send(allPhotos);
 });
 
-router.post("/api/save", uploadMiddleware.single("photo"), (req, res) => {
+router.post("/save", uploadMiddleware.single("photo"), (req, res) => {
   const photo = req.file.filename;
 
   console.log(photo);
