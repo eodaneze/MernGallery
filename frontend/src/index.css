@@ -11,4 +11,14 @@ nav{
 }
 .nav__logo{
   letter-spacing: 1px;
+  font-size: 20px;
+}
+.button{
+  color: rgb(72, 3, 136);
+  font-size: 60px;
+  height: 65px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 2rem;
 }
